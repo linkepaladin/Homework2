@@ -5,6 +5,7 @@ public class Main {
         task3();
         task4();
         task5();
+        task6();
     }
     public static void task1() {
         byte a = 127;
@@ -61,5 +62,20 @@ public class Main {
         int totalWhitePaint = totalClasses * whitePaintPerClass; // Количество купленной белой краски
         int totalBrownPaint = totalClasses * brownPaintPerClass; // Количество купленной коричневой краски
         System.out.println("В школе, где " + totalClasses + " классов, нужно " + totalWhitePaint + " банок белой краски и " + totalBrownPaint + " банок коричневой краски");
+    }
+    public static void task6() {
+        int bananaWeightGrams = 80; // Вес 1 банана
+        int milkWeightPer100Ml = 105; // Вес 100 мл молока
+        int iceCreamWeightPerUnit = 100; // Вес 1 брикета мороженого
+        int eggWeightGrams = 70; // Вес 1 яйца
+        int bananasCount = 5; // Количество бананов
+        int milkVolumeMl = 200; // Объем молока в мл
+        int iceCreamUnits = 2; // Количество брикетов мороженого
+        int eggsCount = 4; // Количество яиц
+        int milkWeightGrams = (milkVolumeMl / 100) * milkWeightPer100Ml; // Пересчет мл в граммы
+        int totalWeightGrams = (bananaWeightGrams * bananasCount) + milkWeightGrams + (iceCreamWeightPerUnit * iceCreamUnits) + (eggWeightGrams * eggsCount);
+        double totalWeightKg = totalWeightGrams / 1000.0;
+        System.out.println("Вес завтрака спортсмена составляет " + totalWeightKg + " килограмм");
+        System.out.println("Вес завтрака спортсмена составляет " + totalWeightGrams + " грамм");
     }
 }
