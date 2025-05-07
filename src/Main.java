@@ -6,6 +6,7 @@ public class Main {
         task4();
         task5();
         task6();
+        task7();
     }
     public static void task1() {
         byte a = 127;
@@ -77,5 +78,17 @@ public class Main {
         double totalWeightKg = totalWeightGrams / 1000.0;
         System.out.println("Вес завтрака спортсмена составляет " + totalWeightKg + " килограмм");
         System.out.println("Вес завтрака спортсмена составляет " + totalWeightGrams + " грамм");
+    }
+    public static void task7() {
+        int weightToLoseKg = 7; // Вес, который нужно сбросить (в кг)
+        int minDailyLossGrams = 250; // Минимальная потеря веса в день (в граммах)
+        int maxDailyLossGrams = 500; // Максимальная потеря веса в день (в граммах)
+        int weightToLoseGrams = weightToLoseKg * 1000; // Переводим кг в граммы
+        int daysForMinLoss = weightToLoseGrams / minDailyLossGrams; // Дней при потере 250 г/день
+        int daysForMaxLoss = weightToLoseGrams / maxDailyLossGrams; // Дней при потере 500 г/день
+        int avgDaysNeeded = (daysForMinLoss + daysForMaxLoss) / 2; // Среднее количество дней
+        System.out.println("Если спортсменн будет терять каждый день по 250 грамм, то ему потребуется " + daysForMinLoss + " дней");
+        System.out.println("Если спортсменн будет терять каждый день по 500 грамм, то ему потребуется " + daysForMaxLoss + " дней");
+        System.out.println("В среднем спортсмену потребуется " + avgDaysNeeded + " дней, чтобы добиться результата");
     }
 }
