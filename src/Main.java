@@ -4,6 +4,7 @@ public class Main {
         task2();
         task3();
         task4();
+        task5();
     }
     public static void task1() {
         byte a = 127;
@@ -51,6 +52,14 @@ public class Main {
         System.out.println("За сутки машина произвела " + bottlesPerDay + " штук бутылок");
         System.out.println("За 3 дня машина произвела " + bottlesPer3Days + " штук бутылок");
         System.out.println("За 1 месяц машина произвела " + bottlesPerMonth + " штук бутылок");
-
+    }
+    public static void task5() {
+        int totalPaintCans = 120; // Всего банок краски
+        int whitePaintPerClass = 2; // Количество банок белой краски на класс
+        int brownPaintPerClass = 4; // Количество банок коричневой краски на класс
+        int totalClasses = totalPaintCans / (whitePaintPerClass + brownPaintPerClass); // Рассчитываем количество классов
+        int totalWhitePaint = totalClasses * whitePaintPerClass; // Количество купленной белой краски
+        int totalBrownPaint = totalClasses * brownPaintPerClass; // Количество купленной коричневой краски
+        System.out.println("В школе, где " + totalClasses + " классов, нужно " + totalWhitePaint + " банок белой краски и " + totalBrownPaint + " банок коричневой краски");
     }
 }
