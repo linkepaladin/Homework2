@@ -2,6 +2,7 @@ public class Main {
     public static void main(String[] args) {
         task1();
         task2();
+        task3();
         }
     public static void task1() {
         byte a = 127;
@@ -25,5 +26,15 @@ public class Main {
         short e = -159;
         int f = 27897;
         byte g = 67;
+    }
+    public static void task3() {
+        byte ludmilaPavlovnaStudentCount = 23;
+        byte annaSergeevnaStudentCount = 27;
+        byte ekaterinaAndreevnaStudentCount = 30;
+        short totalPaperSheets = 480;
+        int totalStudents = ludmilaPavlovnaStudentCount + annaSergeevnaStudentCount + ekaterinaAndreevnaStudentCount;
+        int paperPerStudent = totalPaperSheets / totalStudents;
+        System.out.println("На каждого ученика рассчитано " + paperPerStudent + " листов бумаги");
+
     }
 }
