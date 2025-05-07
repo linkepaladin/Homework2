@@ -7,6 +7,7 @@ public class Main {
         task5();
         task6();
         task7();
+        task8();
     }
     public static void task1() {
         byte a = 127;
@@ -90,5 +91,30 @@ public class Main {
         System.out.println("Если спортсменн будет терять каждый день по 250 грамм, то ему потребуется " + daysForMinLoss + " дней");
         System.out.println("Если спортсменн будет терять каждый день по 500 грамм, то ему потребуется " + daysForMaxLoss + " дней");
         System.out.println("В среднем спортсмену потребуется " + avgDaysNeeded + " дней, чтобы добиться результата");
+    }
+    public static void task8() {
+        int mashasSalary = 67760; // Зарплата Маши
+        int denisSalary = 83690; // Зарплата Дениса
+        int kristinaSalary = 76230; // Зарплата Кристины
+        double raisePercentage = 0.1; // 10% повышение
+        int monthInYear = 12; // Месяцев в году
+        double mashasRaise = mashasSalary * raisePercentage; // Размер повышения
+        double mashasNewSalary = mashasSalary + mashasRaise; // Новая зарплата
+        int mashasOldAnnual = mashasSalary * monthInYear; // Годовой доход ДО
+        double mashasNewAnnual = mashasNewSalary * monthInYear; // Годовой доход ПОСЛЕ
+        double mashasAnnualDifference = mashasNewAnnual - mashasOldAnnual; // Разница
+        System.out.println("Маша теперь получает " + mashasNewSalary + " рублей. Годовой доход вырос на " + mashasAnnualDifference + " рублей");
+        double denisRaise = denisSalary * raisePercentage;
+        double denisNewSalary = denisSalary + denisRaise;
+        int denisOldAnnual = denisSalary * monthInYear;
+        double denisNewAnnual = denisNewSalary * monthInYear;
+        double denisAnnualDifference = denisNewAnnual - denisOldAnnual;
+        System.out.println("Денис теперь получает " + denisNewSalary + " рублей. Годовой доход вырос на " + denisAnnualDifference + " рублей");
+        double kristinaRaise = kristinaSalary * raisePercentage;
+        double kristinaNewSalary = kristinaSalary + kristinaRaise;
+        int kristinaOldAnnual = kristinaSalary * monthInYear;
+        double kristinaNewAnnual = kristinaNewSalary * monthInYear;
+        double kristinaAnnualDifference = kristinaNewAnnual - kristinaOldAnnual;
+        System.out.println("Кристина теперь получает " + kristinaNewSalary + " рублей. Годовой доход вырос на " + kristinaAnnualDifference + " рублей");
     }
 }
